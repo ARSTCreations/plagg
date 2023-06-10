@@ -1,0 +1,4 @@
+.env
+.google-cookie
+fatal_detections.txt
+venv/
