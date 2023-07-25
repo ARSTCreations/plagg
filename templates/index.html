@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Plagg v1.0</h1>
+        <p>
+            The most integral part of what affects the speed of the API are as follows
+            <ul>
+                <li>Server's Internet Speed</li>
+                <li>Server's Processing Power</li>
+                <li>Server's RAM</li>
+            </ul>
+        </p>
+        <form action="{{ url_for('post_get_process') }}" method="post">
+            <p>
+                <h3>
+                    <br>Enter Text to Check for Plagiarism Check
+                </h3>
+                <textarea name="text" rows="20" cols="80" maxlength="2040"></textarea>
+            </p>
+            <p>
+                <input type="radio" name="model" value="seq_match">
+                <label for="model">Sequence Matcher</label>
+                <input type="radio" name="model" value="tfidf">
+                <label for="model">TFIDF Model</label>
+                <input type="radio" name="model" value="word2vec">
+                <label for="model">Word2Vec Model</label>
+                {% if use4 %}
+                    <input type="radio" name="model" value="use4">
+                    <label for="model">USE4 Model</label>
+                {% endif %}
+            </p>
+            <p>
+                <input type="submit" value="Submit (May Take a While based on model, Please Wait Patiently)">
+            </p>
+        </form>
+    </body>
+</html>

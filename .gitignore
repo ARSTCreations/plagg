@@ -1,4 +1,11 @@
+# .env file
 .env
+# Google cookie
 .google-cookie
+# Debug output files
 fatal_detections.txt
+# venv
 venv/
+# Universal Sentence Encoder 4
+# use https://tfhub.dev/google/universal-sentence-encoder/4 instead
+use-4/
